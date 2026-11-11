@@ -2,284 +2,375 @@ export type LanguageCode = 'OM' | 'EN' | 'AM';
 
 export interface LanguageStrings {
   langName: string;
-  topBarText: string;
-  navDualLicense: string;
-  navDivisions: string;
+  // Navigation
+  navServices: string;
   navProjects: string;
   navFleet: string;
-  navJv: string;
+  navPartners: string;
   navCareers: string;
+  navContact: string;
   navPartnerCta: string;
   openRolesBadge: string;
-  heroBadge: string;
+
+  // Hero Section
+  heroKicker: string;
   heroHeadline: string;
   heroSubheadline: string;
-  ctaPrimary: string;
-  ctaSecondary: string;
-  eagleMeaningTag: string;
-  heroPhoto1Tag: string;
-  heroPhoto1Title: string;
-  heroPhoto2Tag: string;
-  heroPhoto2Title: string;
-  heroPhoto3Tag: string;
-  heroPhoto3Title: string;
+  ctaProjects: string;
+  ctaPartner: string;
+  aboutTag: string;
+
+  // Key Metrics
   metrics: {
     stat: string;
     label: string;
   }[];
-  dualLicenseBadge: string;
-  dualLicenseTitle: string;
-  wwcTitle: string;
-  wwcChips: string[];
-  gcTitle: string;
-  gcChips: string[];
-  divisionsKicker: string;
-  divisionsTitle: string;
+
+  // Services (Unified Dual License + Divisions)
+  servicesKicker: string;
+  servicesTitle: string;
+  servicesSubtitle: string;
+  servicesLearnMore: string;
+
+  // Projects
   projectsKicker: string;
   projectsTitle: string;
-  viewBriefBtn: string;
+  projectsSubtitle: string;
+  filterAll: string;
+  filterWater: string;
+  filterRoads: string;
+  filterCivil: string;
+  viewDetailsBtn: string;
+  statusCompleted: string;
+  statusOngoing: string;
+
+  // Fleet
   fleetKicker: string;
   fleetTitle: string;
+  fleetSubtitle: string;
   fleetGuarantee: string;
-  jvBadge: string;
-  jvTitle: string;
-  jvPills: string[];
-  dossierBadge: string;
-  dossierTitle: string;
-  dossierBtn: string;
+  inquireFleetBtn: string;
+
+  // Partnerships & Tenders
+  partnersKicker: string;
+  partnersTitle: string;
+  partnersDescription: string;
+  credentialsTitle: string;
+  credentialsList: string[];
+  requestDossierBtn: string;
+
+  // Careers
+  careersKicker: string;
   careersTitle: string;
   careersSubtitle: string;
-  adminToggleShow: string;
-  adminToggleHide: string;
   applyNowBtn: string;
+  fullTimeBadge: string;
+  expLabel: string;
+
+  // Footer & Contact
+  footerTagline: string;
+  headOfficeTitle: string;
+  headOfficeAddress: string;
+  directLinesTitle: string;
+  allRightsReserved: string;
+
+  // Modals & Forms
+  closeBtn: string;
+  submitBtn: string;
+  formSending: string;
+  formSuccessTitle: string;
+  formSuccessDesc: string;
+  fullNameLabel: string;
+  phoneLabel: string;
+  emailLabel: string;
+  companyLabel: string;
+  inquiryFocusLabel: string;
+  cvUploadLabel: string;
+  cvUploadHint: string;
+  experienceLabel: string;
 }
 
 export const TRANSLATIONS: Record<LanguageCode, LanguageStrings> = {
   OM: {
     langName: 'Afaan Oromoo',
-    topBarText: 'Kontiraaktara Waliigalaa (GC) & Ijaarsa Bishaanii (WWC) • Finfinnee',
-    navDualLicense: 'Hayyama Lamaan',
-    navDivisions: 'Dameewwan Hoji',
+    navServices: 'Dameewwan Hojii',
     navProjects: 'Piroojektoota',
     navFleet: 'Maashinarii',
-    navJv: 'Michooma JV',
+    navPartners: 'Michooma & JV',
     navCareers: 'Carraa Hojii',
+    navContact: 'Quunnamtii',
     navPartnerCta: 'Waliin Hojjechuuf',
     openRolesBadge: 'Banaa',
-    heroBadge: 'Kontiraaktara Waliigalaa (GC) & Ijaarsa Misooma Bishaanii (WWC)',
-    heroHeadline: 'Daandii Aspaaltii, Gamoo fi Misooma Bishaanii Itoophiyaa Gahumsa Joobiraatiin Ijaarra.',
+
+    heroKicker: 'Kontiraaktara Waliigalaa & Injinariingii Bishaanii',
+    heroHeadline: 'Ijaarsa Daandii, Gamoo fi Misooma Bishaanii Gahumsa Ol’aanaan Ijaarra.',
     heroSubheadline:
-      'Itoophiyaa keessatti kontiraaktara hayyama Ijaarsa Waliigalaa (GC) fi Ijaarsa Bishaanii (WWC) bakka tokkotti qabu.',
-    ctaPrimary: 'Gaaffii Michooma JV & Caalbaasii',
-    ctaSecondary: 'Piroojektoota Ilaali',
-    eagleMeaningTag: '"Joobira" = Allaattii Joobiraa (Mul’ata • Humna • Qulqullina Injinariingii)',
-    heroPhoto1Tag: '💧 Hayyama WWC',
-    heroPhoto1Title: 'Ujummoo Bishaanii, Kuusaa & Hidha',
-    heroPhoto2Tag: '🛣️ Hayyama GC',
-    heroPhoto2Title: 'Daandii Aspaaltii & Riqicha',
-    heroPhoto3Tag: '🚜 Maashinarii 75+',
-    heroPhoto3Title: 'Maashinarii Dhuunfaa Keenya',
+      'Itoophiyaa keessatti hayyama Ijaarsa Waliigalaa (GC) fi Ijaarsa Bishaanii (WWC) walitti qindeessuun piroojektoota qulqullina olaanoo yeroon dhiyeessina.',
+    ctaProjects: 'Piroojektoota Ilaali',
+    ctaPartner: 'Waliin Hojjechuuf',
+    aboutTag: 'Allaattii Joobiraa — Mul’ata, Humna fi Qulqullina Injinariingii',
+
     metrics: [
       { stat: 'GC + WWC', label: 'Hayyama Lamaan Guutuu' },
-      { stat: '100% Yeroon', label: 'Kenniinsa Piroojektii & IPC' },
-      { stat: '75+ Maashina', label: 'Maashinarii Dhuunfaa' },
-      { stat: 'JV & NGO', label: 'Michuu Idil-Addunyaa' },
+      { stat: '100%', label: 'Yeroon Xumuruu & IPC' },
+      { stat: '75+ Units', label: 'Maashinarii Dhuunfaa' },
+      { stat: 'FIDIC & WB', label: 'Ulaagaa Idil-Addunyaa' },
     ],
-    dualLicenseBadge: 'Faayidaa Hayyama Lamaanii (GC + WWC)',
-    dualLicenseTitle: 'Hayyama Gurguddoo Lama. Kontiraaktara Amanamaa Tokko.',
-    wwcTitle: 'Ijaarsa Hojiilee Bishaanii (WWC)',
-    wwcChips: [
-      'Ujummoo Bishaan Dhugaatii',
-      'Kuusaa Bishaanii Konkiriitii',
-      'Hidha & Jal’isii Qonnaa',
-      'Bo’oo Lolaa Magaalaa',
+
+    servicesKicker: 'Gahumsa Injinariingii',
+    servicesTitle: 'Dameewwan Injinariingii Gurguddoo Sadii',
+    servicesSubtitle:
+      'Hayyama GC fi WWC tokkummaadhaan qabachuun ijaarsa daandii, bishaanii fi gamoo walitti qindeessee hojjeta.',
+    servicesLearnMore: 'Piroojektoota Damee Kanaa',
+
+    projectsKicker: 'Muuxannoo Hojii',
+    projectsTitle: 'Piroojektoota Gurguddoo',
+    projectsSubtitle: 'Piroojektoota misooma bishaanii, daandii aspaaltii fi gamoo qulqullinaan xumuraman fi hojiirra jiran.',
+    filterAll: 'Hunda',
+    filterWater: 'Hojii Bishaanii',
+    filterRoads: 'Daandii & Riqicha',
+    filterCivil: 'Gamoo & Siivilii',
+    viewDetailsBtn: 'Bal’ina Ilaali',
+    statusCompleted: 'Xumurame',
+    statusOngoing: 'Hojiirra Jira',
+
+    fleetKicker: 'Maashinarii Dhuunfaa',
+    fleetTitle: 'Maashinarii Gurguddoo 75+',
+    fleetSubtitle: 'Maashinarii ijaarsaa dhuunfaa keenyaa suphaa keessoofi tajaajila ariifachiisaa waliin bobbaafamu.',
+    fleetGuarantee: 'Suphaa Keessoo fi Bobbii Ariifachiisaa',
+    inquireFleetBtn: 'Waa’ee Maashinarii Gaafadhu',
+
+    partnersKicker: 'Michooma Idil-Addunyaa & Caalbaasii',
+    partnersTitle: 'Michuu Amanamaa Mootummaa, NGO fi Kaampaanota Alaa',
+    partnersDescription:
+      'Ulaagaa caalbaasii idil-addunyaa (FIDIC, World Bank, AfDB) guutuudhaan piroojektoota gurguddoo irratti qindoominaan hojjenna.',
+    credentialsTitle: 'Ragaalee Qophii & Dandeettii',
+    credentialsList: [
+      'Hayyama Guutuu GC & WWC',
+      'Galmee Maashinarii Dhuunfaa',
+      'Oodiitii Faayinaansii Waggoota Shanii',
+      'Waraqaa Ragaa Xumura Piroojektii (IPC)',
     ],
-    gcTitle: 'Kontiraaktara Waliigalaa (GC)',
-    gcChips: [
-      'Daandii Aspaaltii Gurguddoo',
-      'Riqicha & Culvert Konkiriitii',
-      'Gamoo Daldalaa & Biiroo',
-      'Kuusaa Warshaa (Warehouse)',
-    ],
-    divisionsKicker: 'Gahumsa Injinariingii',
-    divisionsTitle: 'Dameewwan Injinariingii Gurguddoo Sadii',
-    projectsKicker: 'Muuxannoo Hojiilee Keenyaa',
-    projectsTitle: 'Piroojektoota Gurguddoo Hojiirra Jiran & Xumuraman',
-    viewBriefBtn: 'Bal’ina Injinariingii Ilaali',
-    fleetKicker: 'Maashinarii Dhuunfaa 75+ • Saffisaan Bobba’u',
-    fleetTitle: 'Maashinarii Gurguddoo Dhuunfaa Keenya',
-    fleetGuarantee: '100% Suphaa Keessoo & Bobbii Ariifachiisaa',
-    jvBadge: 'Michooma Idil-Addunyaa (JV), NGO & Caalbaasii',
-    jvTitle: 'Michuu Amanamaa Kaampaanota Alaa, Baankii Addunyaa (WB), AfDB & NGO.',
-    jvPills: [
-      'Hayyama Guutuu GC + WWC',
-      'Bobbii Maashinarii Ariifachiisaa',
-      'Iftoomina Herregaa & IPC',
-      'Beekumsa Naannoo & Dhiyeessii',
-    ],
-    dossierBadge: 'Dokumantii Prequalification 2026',
-    dossierTitle: 'Piroofaayilii Kaampaanii & Ragaa Hayyamaa Buufadhu',
-    dossierBtn: 'Piroofaayilii & Dossier Gaafadhu',
-    careersTitle: 'Carraa Hojii & Galmee HR Dijitaalaa',
-    careersSubtitle: 'Baasii ejensii fi gaazexaa ETB kumaatamaan qusata — CV kallattiin bilbila irratti fudhadhu.',
-    adminToggleShow: 'Paanaalii Abbaa Kaampaanii (Admin) Ilaali',
-    adminToggleHide: 'Paanaalii Admin Dhoksi',
-    applyNowBtn: 'Amma Galmaa’i',
+    requestDossierBtn: 'Piroofaayilii & Dossier Gaafadhu',
+
+    careersKicker: 'Carraa Hojii',
+    careersTitle: 'Hojjataa Qaxalee Waliin Hojjanna',
+    careersSubtitle: 'Injinariingii bu’uura misoomaa irratti muuxannoo keessan gabbifadhaa.',
+    applyNowBtn: 'Amma Iyyadhu',
+    fullTimeBadge: 'Yeroo Guutuu',
+    expLabel: 'Muuxannoo',
+
+    footerTagline: 'Kontiraaktara Waliigalaa fi Ijaarsa Misooma Bishaanii — Finfinnee, Itoophiyaa.',
+    headOfficeTitle: 'Waajjira Guddaa',
+    headOfficeAddress: 'Kifle Magaalaa Boolee, Finfinnee, Itoophiyaa',
+    directLinesTitle: 'Quunnamtii Kallattii',
+    allRightsReserved: 'Mirgi Qopheessaa Seeraan Eegamaadha.',
+
+    closeBtn: 'Cufi',
+    submitBtn: 'Ergi',
+    formSending: 'Ergamaa jira...',
+    formSuccessTitle: 'Galatoomaa! Ergaan Keessan Ga’eera',
+    formSuccessDesc: 'Gareen keenya sa’aatii 24 keessatti deebii isiniif kenna.',
+    fullNameLabel: 'Maqaa Guutuu',
+    phoneLabel: 'Lakkoofsa Bilbilaa',
+    emailLabel: 'Imeelii',
+    companyLabel: 'Dhaabbata / Kaampaanii',
+    inquiryFocusLabel: 'Mata Duree Gaaffii',
+    cvUploadLabel: 'CV Keessan Maxxansaa (PDF/DOC)',
+    cvUploadHint: 'Faayilii filachuuf as tuqaa',
+    experienceLabel: 'Sadarkaa Muuxannoo',
   },
+
   EN: {
     langName: 'English',
-    topBarText: 'Dual-Licensed Ethiopian Contractor (GC + WWC) • Addis Ababa',
-    navDualLicense: 'Dual License',
-    navDivisions: 'Divisions',
+    navServices: 'Services',
     navProjects: 'Projects',
-    navFleet: 'Machinery Fleet',
-    navJv: 'International JV',
+    navFleet: 'Fleet',
+    navPartners: 'Partnerships',
     navCareers: 'Careers',
+    navContact: 'Contact',
     navPartnerCta: 'Partner With Us',
     openRolesBadge: 'Open',
-    heroBadge: 'Certified General Contractor & Water Infrastructure Specialist',
-    heroHeadline: "Engineering Ethiopia's Roads, Buildings & Water Systems with Eagle Precision.",
+
+    heroKicker: 'Certified General Contractor & Water Works Specialist',
+    heroHeadline: 'Precision Engineering for Roads, Buildings & Water Systems.',
     heroSubheadline:
-      'Licensed for both Heavy General Construction (GC) and Water Works Engineering (WWC) under one roof.',
-    ctaPrimary: 'JV & Tender Inquiry',
-    ctaSecondary: 'Explore Projects',
-    eagleMeaningTag: '"Joobira" = Eagle in Afaan Oromoo (Vision • Strength • Precision)',
-    heroPhoto1Tag: '💧 WWC Water License',
-    heroPhoto1Title: 'Pipelines, Reservoirs & Dams',
-    heroPhoto2Tag: '🛣️ GC Road License',
-    heroPhoto2Title: 'Asphalt Highways & Bridges',
-    heroPhoto3Tag: '🚜 75+ Owned Units',
-    heroPhoto3Title: 'Owned Heavy Machinery',
+      'Dual-licensed in Ethiopia for heavy civil infrastructure and large-scale water engineering, delivering turnkey projects with speed and structural integrity.',
+    ctaProjects: 'View Projects',
+    ctaPartner: 'Partner With Us',
+    aboutTag: 'Joobira (Eagle) — Vision, Strength & Engineering Precision',
+
     metrics: [
-      { stat: 'GC + WWC', label: 'Dual Licensed in Ethiopia' },
-      { stat: '100% On-Time', label: 'IPC & Project Handover' },
-      { stat: '75+ Machines', label: '100% Owned Heavy Fleet' },
-      { stat: 'JV & NGO Ready', label: 'World Bank & Foreign EPC' },
+      { stat: 'GC + WWC', label: 'Dual-Licensed in Ethiopia' },
+      { stat: '100%', label: 'On-Time Handover Record' },
+      { stat: '75+ Units', label: 'Fully Owned Fleet' },
+      { stat: 'FIDIC & WB', label: 'International Compliance' },
     ],
-    dualLicenseBadge: 'The Joobira Dual-License Advantage',
-    dualLicenseTitle: 'Two Major Ethiopian Licenses. One Turnkey Partner.',
-    wwcTitle: 'Water Works Construction (WWC)',
-    wwcChips: [
-      'Potable Water Pipelines',
-      'Concrete Reservoirs',
-      'Dams & Diversion Weirs',
-      'Irrigation & Drainage',
+
+    servicesKicker: 'Core Divisions',
+    servicesTitle: 'Comprehensive Engineering Capabilities',
+    servicesSubtitle:
+      'Integrating General Contracting and Water Works under a unified management team to streamline multi-disciplinary execution.',
+    servicesLearnMore: 'View Division Projects',
+
+    projectsKicker: 'Selected Portfolio',
+    projectsTitle: 'Featured Infrastructure Projects',
+    projectsSubtitle: 'A proven track record spanning municipal water distribution, heavy highways, and industrial facilities.',
+    filterAll: 'All Projects',
+    filterWater: 'Water Works',
+    filterRoads: 'Roads & Bridges',
+    filterCivil: 'Civil & Buildings',
+    viewDetailsBtn: 'View Details',
+    statusCompleted: 'Completed',
+    statusOngoing: 'Ongoing',
+
+    fleetKicker: 'Heavy Equipment',
+    fleetTitle: '75+ Owned Machinery Fleet',
+    fleetSubtitle: 'High-availability excavators, asphalt pavers, rollers, and heavy transport supported by an in-house mechanical division.',
+    fleetGuarantee: 'In-House Maintenance & Rapid Deployment',
+    inquireFleetBtn: 'Inquire About Fleet Mobilization',
+
+    partnersKicker: 'Joint Ventures & Tenders',
+    partnersTitle: 'Trusted Partner for Foreign EPCs, Donors & Institutions',
+    partnersDescription:
+      'We serve as the local execution contractor of choice for international tenders under World Bank, AfDB, and multilateral financing.',
+    credentialsTitle: 'Prequalification Dossier Includes',
+    credentialsList: [
+      'Certified GC & WWC Regulatory Licenses',
+      'Verified Fleet Libre Ownership Manifest',
+      'Five-Year Audited Financial Statements',
+      'Certified Handover Certificates (IPC)',
     ],
-    gcTitle: 'General Contractor (GC)',
-    gcChips: [
-      'Asphalt Roads & Highways',
-      'RC Bridges & Culverts',
-      'Commercial High-Rises',
-      'Industrial Warehouses',
-    ],
-    divisionsKicker: 'Core Capabilities',
-    divisionsTitle: 'Three Engineering Divisions',
-    projectsKicker: 'Project Portfolio',
-    projectsTitle: 'Featured Ethiopian Projects',
-    viewBriefBtn: 'View Technical Brief',
-    fleetKicker: '75+ Owned Units • Rapid Mobilization',
-    fleetTitle: 'Owned Heavy Machinery Fleet',
-    fleetGuarantee: '100% In-House Maintenance & Rapid Site Mobilization',
-    jvBadge: 'International Joint Venture (JV) & NGO Partner',
-    jvTitle: 'Trusted Local Execution Partner for Foreign EPCs, World Bank, AfDB & UN Projects.',
-    jvPills: [
-      'Full GC + WWC Compliance',
-      'Rapid Fleet Mobilization',
-      'FIDIC & IPC Transparency',
-      'Local Supply Chain Mastery',
-    ],
-    dossierBadge: '2026 Prequalification Dossier',
-    dossierTitle: 'Download Company Profile & License Package',
-    dossierBtn: 'Request Company Profile & Dossier',
-    careersTitle: 'Careers & Instant HR Portal',
-    careersSubtitle: 'Saves thousands of ETB in recruitment & newspaper fees — direct CV applications to mobile.',
-    adminToggleShow: 'Preview Owner Admin Panel',
-    adminToggleHide: 'Hide Owner Admin Panel',
+    requestDossierBtn: 'Request Prequalification Dossier',
+
+    careersKicker: 'Careers',
+    careersTitle: 'Build With Joobira',
+    careersSubtitle: 'Join our multidisciplinary engineering teams on high-impact infrastructure sites across Ethiopia.',
     applyNowBtn: 'Apply Now',
+    fullTimeBadge: 'Full-Time',
+    expLabel: 'Experience',
+
+    footerTagline: 'General Contractor & Water Works Construction — Addis Ababa, Ethiopia.',
+    headOfficeTitle: 'Headquarters',
+    headOfficeAddress: 'Bole Sub-City, Addis Ababa, Ethiopia',
+    directLinesTitle: 'Direct Inquiries',
+    allRightsReserved: 'All rights reserved.',
+
+    closeBtn: 'Close',
+    submitBtn: 'Submit',
+    formSending: 'Submitting...',
+    formSuccessTitle: 'Thank You. Inquiry Received.',
+    formSuccessDesc: 'Our engineering management team will review your dossier request and contact you within 24 hours.',
+    fullNameLabel: 'Full Name',
+    phoneLabel: 'Phone Number',
+    emailLabel: 'Email Address',
+    companyLabel: 'Company / Organization',
+    inquiryFocusLabel: 'Subject / Area of Interest',
+    cvUploadLabel: 'Attach CV (PDF/DOC)',
+    cvUploadHint: 'Click to select file',
+    experienceLabel: 'Years of Experience',
   },
+
   AM: {
     langName: 'አማርኛ',
-    topBarText: 'ጠቅላላ ተቋራጭ (GC) እና የውሃ ስራዎች ተቋራጭ (WWC) • አዲስ አበባ',
-    navDualLicense: 'ጥንድ ፍቃድ',
-    navDivisions: 'የስራ ዘርፎች',
+    navServices: 'የስራ ዘርፎች',
     navProjects: 'ፕሮጀክቶች',
     navFleet: 'ማሽነሪዎች',
-    navJv: 'ዓለም አቀፍ JV',
-    navCareers: 'ክፍት የስራ ቦታ',
+    navPartners: 'ሽርክና',
+    navCareers: 'ክፍት ስራ',
+    navContact: 'አድራሻ',
     navPartnerCta: 'አብረውን ይስሩ',
     openRolesBadge: 'ክፍት',
-    heroBadge: 'የተመሰከረለት ጠቅላላ ተቋራጭ (GC) እና የውሃ መሠረተ ልማት ስፔሻሊስት',
-    heroHeadline: 'የኢትዮጵያን መንገዶች፣ ህንፃዎች እና የውሃ ፕሮጀክቶችን በንስር ጥራት እንገነባለን።',
+
+    heroKicker: 'ጠቅላላ ተቋራጭ እና የውሃ ስራዎች ስፔሻሊስት',
+    heroHeadline: 'የመንገድ፣ የህንፃ እና የውሃ መሰረተ-ልማት ግንባታ በላቀ ጥራት።',
     heroSubheadline:
-      'በከባድ ጠቅላላ ኮንስትራክሽን (GC) እና በውሃ ስራዎች ምህንድስና (WWC) ጥንድ ፍቃድ ያለው ተቋራጭ።',
-    ctaPrimary: 'የሽርክና (JV) እና ጨረታ',
-    ctaSecondary: 'ፕሮጀክቶችን ይመልከቱ',
-    eagleMeaningTag: '“ጆቢራ” = ንስር በአፋን ኦሮሞ (ራዕይ • ጥንካሬ • ጥራት)',
-    heroPhoto1Tag: '💧 የውሃ ፍቃድ (WWC)',
-    heroPhoto1Title: 'የውሃ መስመሮች፣ ማጠራቀሚያ እና ግድቦች',
-    heroPhoto2Tag: '🛣️ የመንገድ ፍቃድ (GC)',
-    heroPhoto2Title: 'የአስፋልት መንገዶች እና ድልድዮች',
-    heroPhoto3Tag: '🚜 75+ ማሽነሪዎች',
-    heroPhoto3Title: 'የራሳችን ከባድ ማሽነሪዎች',
+      'በጠቅላላ ኮንስትራክሽን (GC) እና በውሃ ስራዎች ምህንድስና (WWC) ህጋዊ ፍቃድ ያለው፣ አስተማማኝ እና በጊዜ የሚያስረክብ ግንባር ቀደም ተቋራጭ።',
+    ctaProjects: 'ፕሮጀክቶችን ይመልከቱ',
+    ctaPartner: 'አብረውን ይስሩ',
+    aboutTag: 'ጆቢራ (ንስር) — ራዕይ፣ ጥንካሬ እና የምህንድስና ጥራት',
+
     metrics: [
       { stat: 'GC + WWC', label: 'ጥንድ ህጋዊ ፍቃድ' },
-      { stat: '100% በሰዓቱ', label: 'የፕሮጀክት እና IPC ርክክብ' },
-      { stat: '75+ ማሽኖች', label: 'የድርጅቱ የግል ማሽነሪዎች' },
-      { stat: 'JV & NGO ዝግጁ', label: 'ዓለም አቀፍ የሽርክና አጋር' },
+      { stat: '100%', label: 'የተሟላ የርክክብ ታሪክ' },
+      { stat: '75+ ማሽኖች', label: 'የድርጅቱ የግል ማሽነሪ' },
+      { stat: 'FIDIC & WB', label: 'ዓለም አቀፍ ደረጃዎች' },
     ],
-    dualLicenseBadge: 'የጆቢራ ጥንድ ፍቃድ ብልጫ (GC + WWC)',
-    dualLicenseTitle: 'ሁለት ታላላቅ ፍቃዶች። አንድ ታማኝ ተቋራጭ።',
-    wwcTitle: 'የውሃ ስራዎች ኮንስትራክሽን (WWC)',
-    wwcChips: [
-      'የመጠጥ ውሃ ቧንቧ መስመሮች',
-      'የኮንክሪት ውሃ ማጠራቀሚያዎች',
-      'ግድቦች እና የመስኖ ቦዮች',
-      'የከተማ ጎርፍ ማስወገጃ',
+
+    servicesKicker: 'የምህንድስና ዘርፎች',
+    servicesTitle: 'የተቀናጁ ዋና የምህንድስና አገልግሎቶች',
+    servicesSubtitle:
+      'የGC እና WWC ፍቃዶችን በማቀናጀት የመንገድ፣ የውሃ እና የሲቪል ህንፃ ፕሮጀክቶችን በአንድ አስተዳደር ስር በብቃት ያከናውናል።',
+    servicesLearnMore: 'የዚህ ዘርፍ ፕሮጀክቶች',
+
+    projectsKicker: 'የተሰሩ ስራዎች',
+    projectsTitle: 'ዋና ዋና ፕሮጀክቶች',
+    projectsSubtitle: 'የከተማ መጠጥ ውሃ አቅርቦት፣ ከባድ አስፋልት መንገዶች እና ዘመናዊ ህንፃዎች በተሟላ ጥራት የተገነቡ።',
+    filterAll: 'ሁሉም',
+    filterWater: 'የውሃ ስራዎች',
+    filterRoads: 'መንገድ እና ድልድይ',
+    filterCivil: 'ህንፃ እና ሲቪል',
+    viewDetailsBtn: 'ዝርዝር ይመልከቱ',
+    statusCompleted: 'የተጠናቀቀ',
+    statusOngoing: 'በሂደት ላይ',
+
+    fleetKicker: 'ከባድ ማሽነሪዎች',
+    fleetTitle: '75+ የድርጅቱ የግል ከባድ ማሽነሪዎች',
+    fleetSubtitle: 'ለስራ ዝግጁ የሆኑ ኤክስካቫተሮች፣ የአስፋልት አንጣፊዎች፣ ከባድ ተሽከርካሪዎች እና የውሃ ስራ እቃዎች በራሳችን የጥገና ቡድን የሚደገፉ።',
+    fleetGuarantee: 'የውስጥ ጥገና እና ፈጣን ስምሪት',
+    inquireFleetBtn: 'የማሽነሪ ዝርዝር ይጠይቁ',
+
+    partnersKicker: 'ዓለም አቀፍ ሽርክና & ጨረታ',
+    partnersTitle: 'ለውጭ ተቋራጮች፣ ዓለም ባንክ እና NGO ፕሮጀክቶች ታማኝ አጋር',
+    partnersDescription:
+      'ዓለም አቀፍ የኮንትራት ደንቦችን (FIDIC) በመከተል በጋራ የሽርክና ውል (JV) እና በሀገር ውስጥ ተቋራጭነት በጥራት እንሰራለን።',
+    credentialsTitle: 'የብቃት ማረጋገጫ ዶሴ ዝርዝር',
+    credentialsList: [
+      'የታደሰ የGC እና WWC የብቃት ማረጋገጫ ፍቃድ',
+      'የተረጋገጠ የከባድ ማሽነሪዎች ሊብሬ',
+      'የአምስት ዓመታት የተመረመረ የሂሳብ ሪፖርት',
+      'የተረከቡ ፕሮጀክቶች ማስረጃ (IPC)',
     ],
-    gcTitle: 'ጠቅላላ ተቋራጭ (GC)',
-    gcChips: [
-      'ከባድ የአስፋልት መንገዶች',
-      'ድልድዮች እና ከልቨርቶች',
-      'ዘመናዊ የንግድ ህንፃዎች',
-      'የኢንዱስትሪ መጋዘኖች',
-    ],
-    divisionsKicker: 'ዋና የምህንድስና ዘርፎች',
-    divisionsTitle: 'ሶስት የተቀናጁ የምህንድስና ዘርፎች',
-    projectsKicker: 'የፕሮጀክት ልምድ',
-    projectsTitle: 'ተጠናቀው የተረከቡ እና በሂደት ላይ ያሉ ፕሮጀክቶች',
-    viewBriefBtn: 'ዝርዝር መረጃ ይመልከቱ',
-    fleetKicker: '75+ የግል ማሽነሪዎች • ፈጣን ስምሪት',
-    fleetTitle: 'የድርጅቱ ከባድ ማሽነሪዎች እና መሳሪያዎች',
-    fleetGuarantee: '100% የውስጥ ጥገና እና ፈጣን የሳይት ስምሪት',
-    jvBadge: 'ዓለም አቀፍ ሽርክና (JV) እና NGO አጋር',
-    jvTitle: 'ለውጭ ሀገር ተቋራጮች፣ ዓለም ባንክ (WB)፣ AfDB እና NGO ፕሮጀክቶች ታማኝ አጋር።',
-    jvPills: [
-      'ሙሉ የGC + WWC ህጋዊ ብቃት',
-      'ፈጣን የማሽነሪ ስምሪት',
-      'ግልጽ የIPC እና ፋይናንስ አሰራር',
-      'ጠንካራ የሀገር ውስጥ አቅርቦት',
-    ],
-    dossierBadge: '2026 የብቃት ማረጋገጫ ሰነድ',
-    dossierTitle: 'የድርጅቱን ፕሮፋይል እና ፍቃዶች ያውርዱ',
-    dossierBtn: 'ፕሮፋይል እና ዶሴ ይጠይቁ',
-    careersTitle: 'ክፍት የስራ ቦታዎች እና የHR ፖርታል',
-    careersSubtitle: 'የኤጀንሲ እና የጋዜጣ ወጪን በሺዎች ብር ይቆጥባል — ሲቪ በቀጥታ በስልክ ይቀበሉ።',
-    adminToggleShow: 'የባለቤት አድሚን ፓነል ይመልከቱ',
-    adminToggleHide: 'አድሚን ፓነል ይዝጉ',
+    requestDossierBtn: 'የድርጅቱን ዶሴ ይጠይቁ',
+
+    careersKicker: 'ክፍት የስራ ቦታዎች',
+    careersTitle: 'አብረውን ይስሩ',
+    careersSubtitle: 'የላቀ የምህንድስና ቡድናችንን በመቀላቀል በሀገሪቱ ታላላቅ ፕሮጀክቶች ላይ ይሳተፉ።',
     applyNowBtn: 'አሁን ያመልክቱ',
+    fullTimeBadge: 'ሙሉ ጊዜ',
+    expLabel: 'የስራ ልምድ',
+
+    footerTagline: 'ጠቅላላ ተቋራጭ እና የውሃ ስራዎች ምህንድስና — አዲስ አበባ፣ ኢትዮጵያ።',
+    headOfficeTitle: 'ዋና መሥሪያ ቤት',
+    headOfficeAddress: 'ቦሌ ክፍለ ከተማ፣ አዲስ አበባ፣ ኢትዮጵያ',
+    directLinesTitle: 'ቀጥታ አድራሻ',
+    allRightsReserved: 'መብቱ በህግ የተጠበቀ ነው።',
+
+    closeBtn: 'ዝጋ',
+    submitBtn: 'አስገባ',
+    formSending: 'በመላክ ላይ...',
+    formSuccessTitle: 'እናመሰግናለን! ጥያቄዎ ደርሶናል',
+    formSuccessDesc: 'የምህንድስና ቡድናችን መረጃዎን ተመልክቶ በ24 ሰዓት ውስጥ ያገኝዎታል።',
+    fullNameLabel: 'ሙሉ ስም',
+    phoneLabel: 'ስልክ ቁጥር',
+    emailLabel: 'ኢሜይል',
+    companyLabel: 'የድርጅት ስም',
+    inquiryFocusLabel: 'የጥያቄው ርዕስ',
+    cvUploadLabel: 'ሲቪ ያያይዙ (PDF/DOC)',
+    cvUploadHint: 'ፋይል ለመምረጥ እዚህ ይጫኑ',
+    experienceLabel: 'የስራ ልምድ',
   },
 };
 
 export interface EngineeringDivision {
   id: 'water' | 'roads' | 'civil';
-  filterCategory: Exclude<ProjectCategory, 'All Projects'>;
+  filterCategory: 'Water Works' | 'Asphalt & Roads' | 'Civil & Buildings';
   title: Record<LanguageCode, string>;
   licenseTag: string;
   shortDesc: Record<LanguageCode, string>;
   image: string;
   keyDeliverables: Record<LanguageCode, string[]>;
   standards: string[];
-  highlightStat: Record<LanguageCode, string>;
 }
 
 export const ENGINEERING_DIVISIONS: EngineeringDivision[] = [
@@ -287,59 +378,54 @@ export const ENGINEERING_DIVISIONS: EngineeringDivision[] = [
     id: 'water',
     filterCategory: 'Water Works',
     title: {
-      OM: 'Ijaarsa Bishaanii & Hydro-Engineering',
+      OM: 'Injinariingii Bishaanii & Hydro-Engineering',
       EN: 'Water Works & Hydro-Engineering',
       AM: 'የውሃ ስራዎች እና ሃይድሮ ምህንድስና',
     },
     licenseTag: 'WWC License',
     shortDesc: {
-      OM: 'Ujummoo bishaan dhugaatii, kuusaa konkiriitii, hidha & bo’oo jal’isii.',
-      EN: 'Potable water pipelines, concrete reservoirs, dams & irrigation canals.',
+      OM: 'Ujummoo bishaan dhugaatii, kuusaa konkiriitii, hidha fi bo’oo jal’isii qonnaa.',
+      EN: 'High-pressure potable water pipelines, RC reservoirs, diversion dams, and irrigation networks.',
       AM: 'የመጠጥ ውሃ መስመሮች፣ የኮንክሪት ማጠራቀሚያዎች፣ ግድቦች እና የመስኖ ቦዮች።',
     },
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
     keyDeliverables: {
       OM: [
         'Ujummoo Bishaanii HD-PE & Ductile Iron',
         'Kuusaa Bishaanii Konkiriitii (500m³ – 10,000m³)',
-        'Hidha, Weir & Bo’oo Jal’isii Qonnaa',
+        'Hidha & Bo’oo Jal’isii Qonnaa',
         'Bo’oo Lolaa Magaalaa (Storm Drainage)',
       ],
       EN: [
-        'HD-PE & Ductile Iron Water Pipelines',
-        'RC Reservoirs (500m³ – 10,000m³)',
-        'Dams, Weirs & Irrigation Canals',
-        'Urban Storm Drainage Networks',
+        'Ductile Iron & High-Density Polyethylene (HD-PE) Pipelines',
+        'Reinforced Concrete Ground & Elevated Reservoirs',
+        'Agricultural Diversion Weirs & Irrigation Channels',
+        'Municipal Stormwater Drainage Networks',
       ],
       AM: [
-        'HD-PE እና Ductile Iron የውሃ ቧንቧዎች',
+        'HD-PE እና Ductile Iron የውሃ ቧንቧ መስመሮች',
         'የኮንክሪት ውሃ ማጠራቀሚያዎች (500m³ – 10,000m³)',
-        'ግድቦች እና የመስኖ ቦዮች',
+        'የወንዝ አቅጣጫ ማስቀየሪያ ግድቦች እና የመስኖ ቦዮች',
         'የከተማ ጎርፍ ማስወገጃ መስመሮች',
       ],
     },
-    standards: ['MoWE Certified', 'ISO 2531 Pipes', 'WASH Compliant'],
-    highlightStat: {
-      OM: '140+ km Ujummoo Bishaanii',
-      EN: '140+ km Pipelines Built',
-      AM: '140+ ኪ.ሜ የውሃ መስመር',
-    },
+    standards: ['Ministry of Water & Energy Certified', 'ISO 2531 / EN 545', 'WASH Guidelines'],
   },
   {
     id: 'roads',
     filterCategory: 'Asphalt & Roads',
     title: {
-      OM: 'Ijaarsa Daandii Aspaaltii & Riqichaa',
-      EN: 'Asphalt Road & Highway Works',
+      OM: 'Daandii Aspaaltii & Riqicha',
+      EN: 'Highway & Bridge Construction',
       AM: 'የአስፋልት መንገድ እና ድልድይ ስራዎች',
     },
     licenseTag: 'GC License',
     shortDesc: {
-      OM: 'Daandii aspaaltii ho’aa, qoffora lafaa, sub-base, riqicha & culvert.',
-      EN: 'Hot-mix asphalt paving, heavy earthworks, sub-base, bridges & culverts.',
-      AM: 'ትኩስ አስፋልት ንጣፍ፣ ከባድ የአፈር ቆረጣ፣ ድልድዮች እና ከልቨርቶች።',
+      OM: 'Daandii aspaaltii ho’aa, qoffora lafaa, riqicha konkiriitii fi culvert.',
+      EN: 'Hot-mix asphalt paving, heavy earthwork balancing, reinforced concrete bridges, and drainage structures.',
+      AM: 'ትኩስ አስፋልት ንጣፍ፣ ከባድ የአፈር ቆረጣ፣ የኮንክሪት ድልድዮች እና ከልቨርቶች።',
     },
-    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80',
     keyDeliverables: {
       OM: [
         'Daandii Aspaaltii Gurguddoo (Hot-Mix AC)',
@@ -348,10 +434,10 @@ export const ENGINEERING_DIVISIONS: EngineeringDivision[] = [
         'Laaboraatoorii Qulqullina Aspaaltii & Biyyee',
       ],
       EN: [
-        'Hot-Mix Asphalt (AC) Highways',
-        'Bulk Earthworks & Sub-Base Grading',
-        'RC River Bridges & Box Culverts',
-        'On-Site Asphalt & Soil Lab QA/QC',
+        'Hot-Mix Asphalt Concrete (AC) Arterial Highways',
+        'Sub-Base Preparation & Geotechnical Stabilization',
+        'Multi-Span Reinforced Concrete River Bridges',
+        'Field Testing & Material Laboratory Quality Control',
       ],
       AM: [
         'ከባድ የአስፋልት መንገዶች (Hot-Mix AC)',
@@ -360,54 +446,44 @@ export const ENGINEERING_DIVISIONS: EngineeringDivision[] = [
         'የአስፋልት እና የአፈር ላቦራቶሪ ፍተሻ',
       ],
     },
-    standards: ['ERA Standard', 'AASHTO Lab', 'Zero-Defect Handover'],
-    highlightStat: {
-      OM: '85+ km Daandii Aspaaltii',
-      EN: '85+ km Asphalt Roads',
-      AM: '85+ ኪ.ሜ አስፋልት መንገድ',
-    },
+    standards: ['Ethiopian Roads Administration (ERA)', 'AASHTO Standards', 'Strict QA/QC'],
   },
   {
     id: 'civil',
     filterCategory: 'Civil & Buildings',
     title: {
-      OM: 'Ijaarsa Gamoo Daldalaa & Siivilii',
-      EN: 'Civil & Commercial Buildings',
+      OM: 'Ijaarsa Gamoo & Siivilii',
+      EN: 'Civil & Structural Buildings',
       AM: 'የሲቪል እና የንግድ ህንፃዎች ግንባታ',
     },
     licenseTag: 'GC License',
     shortDesc: {
-      OM: 'Gamoo darbii hedduu, dhaabbilee mootummaa & kuusaa warshaa.',
-      EN: 'Commercial high-rises, public institutions & industrial steel warehouses.',
+      OM: 'Gamoo darbii hedduu, kuusaa warshaa fi dhaabbilee tajaajila uummataa.',
+      EN: 'Commercial towers, deep foundation structural frames, and heavy industrial steel warehouses.',
       AM: 'ባለ ብዙ ወለል የንግድ ህንፃዎች፣ የመንግስት ተቋማት እና የኢንዱስትሪ መጋዘኖች።',
     },
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80',
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
     keyDeliverables: {
       OM: [
         'Gamoo Daldalaa & Biiroo Darbii Hedduu',
         'Kuusaa Warshaa (Steel Warehouses)',
-        'Yuunivarsiitii & Hospitaalota Mootummaa',
         'Bu’uura Gad-Fagoo & Caasaa Konkiriitii',
+        'Sirna Ijaarsa Turnkey MEP',
       ],
       EN: [
-        'Multi-Story Commercial & Office Towers',
-        'Industrial Warehouses & Logistics Hubs',
-        'Public Universities & Hospitals',
-        'Deep Foundations & Structural RC',
+        'Multi-Storey Commercial & Office Complexes',
+        'Industrial Logistics Sheds & Steel Warehouses',
+        'Deep Foundation Shoring & Structural Concrete',
+        'Integrated Mechanical, Electrical & Plumbing (MEP)',
       ],
       AM: [
         'ባለ ብዙ ወለል የንግድ እና ቢሮ ህንፃዎች',
         'የኢንዱስትሪ ብረት መጋዘኖች',
-        'ዩኒቨርሲቲዎች እና ሆስፒታሎች',
         'ጥልቅ መሠረት እና የኮንክሪት ስራዎች',
+        'የተቀናጀ የኤሌክትሪክ እና የውሃ ዝርጋታ',
       ],
     },
-    standards: ['EBCS Seismic Code', 'Eurocode RC', 'Turnkey MEP'],
-    highlightStat: {
-      OM: '25+ Gamoo Gurguddoo',
-      EN: '25+ Major Complexes',
-      AM: '25+ ታላላቅ ህንፃዎች',
-    },
+    standards: ['Ethiopian Building Code (EBCS)', 'Eurocode Compatible', 'Turnkey Handover'],
   },
 ];
 
@@ -417,10 +493,10 @@ export interface ProjectItem {
   id: string;
   title: string;
   location: string;
-  category: Exclude<ProjectCategory, 'All Projects'>;
+  category: 'Water Works' | 'Asphalt & Roads' | 'Civil & Buildings';
   scopeHighlights: string;
-  status: 'Completed' | 'Ongoing - 85%' | 'Ongoing - 92%';
-  progressPercent: number;
+  status: 'Completed' | 'Ongoing';
+  completionLabel: string;
   image: string;
   clientType: string;
   contractRole: string;
@@ -439,333 +515,329 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'Regional Urban Water Supply & Pipeline Network',
     location: 'Shaggar City, Oromia',
     category: 'Water Works',
-    scopeHighlights: '42km Ductile Iron Pipe + 2 Reservoirs (2,500m³)',
+    scopeHighlights: '42.4 km Ductile Iron Pipe + 2 Reservoirs (2,500m³ each)',
     status: 'Completed',
-    progressPercent: 100,
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
+    completionLabel: '100% Handover Complete',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     clientType: 'Regional Water Bureau (World Bank Co-Financed)',
-    contractRole: 'Main Contractor (WWC)',
+    contractRole: 'Lead Contractor (WWC)',
     duration: '18 Months',
     technicalBrief: {
       overview:
-        'High-pressure potable water transmission pipeline and two 2,500m³ reinforced concrete reservoirs.',
+        'Transmission pipeline network delivering high-pressure potable water with two 2,500m³ reinforced concrete reservoirs and automated pressure-reducing stations.',
       keyQuantities: [
-        '42.4 km DN300–DN500 Ductile Iron & HD-PE Pipe',
-        '2 × 2,500 m³ RC Ground Service Reservoirs',
+        '42.4 km DN300–DN500 Ductile Iron & HD-PE Pipelines',
+        '2 × 2,500 m³ Reinforced Concrete Ground Reservoirs',
         '4 Booster Pumping Stations & 38 Valve Chambers',
       ],
       machineryDeployed: [
-        '4 CAT 330 Excavators & Rock Breakers',
-        '3 HD-PE Butt-Fusion Welding Rigs',
-        '2 Hydrostatic Pressure Testing Units',
+        '4 CAT 330 Excavators with Hydraulic Rock Breakers',
+        '3 Automatic HD-PE Butt-Fusion Welding Stations',
+        '2 Calibrated Hydrostatic Pressure Testing Rigs',
       ],
       dualLicenseAdvantage:
-        '6.5km of asphalt road crossings reinstated in-house using Joobira’s GC road crew.',
+        '6.5 km of asphalt road crossings and stormwater channels reinstated directly by Joobira’s GC division without third-party subcontracting delays.',
     },
   },
   {
     id: 'proj-road-1',
-    title: '18km Heavy Asphalt Arterial Road & Drainage',
+    title: 'Dual Asphalt Highway & Stormwater Drainage',
     location: 'Adama–Bishoftu Corridor',
     category: 'Asphalt & Roads',
-    scopeHighlights: '18km Dual Asphalt Highway + 24km Storm Drains',
+    scopeHighlights: '18.0 km Dual Asphalt Carriageway + 24.0 km RC Channels',
     status: 'Completed',
-    progressPercent: 100,
-    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80',
+    completionLabel: '100% Handover Complete',
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80',
     clientType: 'Public Roads Authority',
     contractRole: 'Prime Contractor (GC)',
     duration: '22 Months',
     technicalBrief: {
       overview:
-        'Heavy-axle industrial asphalt arterial highway with crushed stone base course and bilateral RC storm drainage.',
+        'Heavy-axle asphalt corridor designed for high-tonnage freight traffic, complete with crushed stone base course and continuous reinforced concrete drainage channels.',
       keyQuantities: [
-        '18.0 km Dual-Carriageway Hot-Mix Asphalt',
-        '340,000 m³ Bulk Earthworks & Sub-Base',
-        '24.0 km RC U-Channel Storm Drainage',
+        '18.0 km Dual-Carriageway Hot-Mix Asphalt Concrete',
+        '340,000 m³ Earthwork Balancing & Subgrade Compaction',
+        '24.0 km Reinforced Concrete U-Drainage Network',
       ],
       machineryDeployed: [
-        'Vögele Super 1800-3 Asphalt Paver',
-        '3 CAT 140K Graders & 4 Hamm Rollers',
-        '14 Sinotruk HOWO Dump Trucks',
+        'Vögele Super 1800-3 Asphalt Paver with Electronic Screed',
+        '3 CAT 140K Graders & 4 Hamm Vibratory Compactors',
+        '14 Sinotruk HOWO Heavy Dump Trucks',
       ],
       dualLicenseAdvantage:
-        'Relocated municipal water mains and built storm drainage channels seamlessly under GC + WWC.',
+        'Municipal water main utility relocations along the corridor executed seamlessly under Joobira’s WWC license.',
     },
   },
   {
     id: 'proj-civil-1',
-    title: '2B+G+10 Commercial & Corporate Office Tower',
+    title: '2B+G+10 Commercial Corporate Complex',
     location: 'Bole Sub-City, Addis Ababa',
     category: 'Civil & Buildings',
-    scopeHighlights: '14,800 m² Structural RC Frame & Curtain Wall',
+    scopeHighlights: '14,800 m² Structural Frame & Integrated Utilities',
     status: 'Completed',
-    progressPercent: 100,
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+    completionLabel: '100% Handover Complete',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     clientType: 'Private Institutional Developer',
     contractRole: 'Turnkey Contractor (GC)',
     duration: '24 Months',
     technicalBrief: {
       overview:
-        'Deep pile-shored basement excavation, C-40 structural frame, glazed curtain wall, and turnkey MEP systems.',
+        'High-density corporate facility featuring deep secant pile shoring, seismic C-40 concrete structural frame, and comprehensive plumbing and fire protection systems.',
       keyQuantities: [
-        '14,800 m² Built-Up Area (2B+G+10)',
-        '11,200 m³ Structural Concrete & 1,450T Rebar',
-        '300 m³ Underground Water Cistern & Fire Pumps',
+        '14,800 m² Built-Up Footprint (2B+G+10 Floors)',
+        '11,200 m³ High-Strength Concrete & 1,450 Tons Rebar',
+        '300 m³ Underground Fire Cistern & Booster Systems',
       ],
       machineryDeployed: [
-        '50m Tower Crane & Stationary Concrete Pump',
-        '3 Transit Mixers & Deep Dewatering Pumps',
-        '2 Heavy Excavators for Shoring & Basement',
+        '50m Tower Crane & Stationary Concrete Boom Pump',
+        'Transit Mixers & Continuous Dewatering Wellpoint Fleet',
+        'Heavy Hydraulic Excavators for Basement Shoring',
       ],
       dualLicenseAdvantage:
-        'Executed deep basement groundwater dewatering and municipal sewer tie-ins in-house.',
+        'Deep excavation groundwater dewatering and external municipal tie-ins performed by in-house hydro engineers.',
     },
   },
   {
     id: 'proj-water-2',
-    title: 'Agricultural Irrigation Scheme & Diversion Weir',
-    location: 'Arsi & East Shewa Zone',
+    title: 'River Diversion Weir & Agricultural Irrigation Scheme',
+    location: 'East Shewa Zone, Oromia',
     category: 'Water Works',
-    scopeHighlights: '48m Concrete Weir + 31km Lined Irrigation Canals',
-    status: 'Ongoing - 85%',
-    progressPercent: 85,
-    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=900&q=80',
+    scopeHighlights: '48m Concrete Diversion Weir + 31.5 km Lined Canals',
+    status: 'Ongoing',
+    completionLabel: 'Ongoing Execution',
+    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=1200&q=80',
     clientType: 'Regional Irrigation Bureau',
     contractRole: 'Lead Contractor (WWC + GC)',
-    duration: '16 Months (85%)',
+    duration: '16 Months',
     technicalBrief: {
       overview:
-        'Perennial river concrete diversion weir and 31km of concrete-lined canals irrigating 3,200+ hectares.',
+        'Perennial river control structure delivering reliable gravity irrigation to over 3,200 hectares of farmland, with gravel maintenance roads.',
       keyQuantities: [
-        '48m Reinforced Concrete River Diversion Weir',
-        '31.5 km Lined Primary & Secondary Canals',
-        '14.0 km Gravel Service Access Roads',
+        '48m Reinforced Concrete River Diversion Weir & Scour Gates',
+        '31.5 km Trapezoidal Concrete-Lined Primary Canals',
+        '14.0 km Engineered Gravel Service & Access Roads',
       ],
       machineryDeployed: [
-        '5 Hydraulic Excavators & 2 CAT D8R Dozers',
-        'River Cofferdam Dewatering Pump Fleet',
-        '2 Mobile Concrete Batching Plants',
+        '5 Heavy Hydraulic Excavators & 2 CAT D8R Dozers',
+        'High-Capacity River Cofferdam Dewatering Pumps',
+        'Mobile Automated Concrete Batching Units',
       ],
       dualLicenseAdvantage:
-        'Delivered both the hydro weir/canals (WWC) and 14km service roads (GC) under one contract.',
+        'Hydraulic weir construction (WWC) and 14 km service roads (GC) consolidated under a single accountable contract.',
     },
   },
   {
     id: 'proj-road-2',
-    title: 'Urban Collector Asphalt Road & Twin RC Bridges',
+    title: 'Urban Arterial Highway & Reinforced Concrete Bridges',
     location: 'Jimma–Agaro Corridor',
     category: 'Asphalt & Roads',
-    scopeHighlights: '12.5km Asphalt Road + Two 28m RC River Bridges',
-    status: 'Ongoing - 92%',
-    progressPercent: 92,
-    image: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=900&q=80',
+    scopeHighlights: '12.5 km Asphalt Highway + Two 28m RC Bridges',
+    status: 'Ongoing',
+    completionLabel: 'Ongoing Execution',
+    image: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1200&q=80',
     clientType: 'Municipal Infrastructure Agency',
-    contractRole: 'Main Contractor (GC)',
-    duration: '18 Months (92%)',
+    contractRole: 'Prime Contractor (GC)',
+    duration: '18 Months',
     technicalBrief: {
       overview:
-        'Hot-Mix Asphalt collector corridor featuring two 28m reinforced concrete T-girder river bridges.',
+        'Major transportation upgrade featuring hot-mix asphalt surface course, river training retaining walls, and two multi-girder concrete river crossings.',
       keyQuantities: [
-        '12.5 km Hot-Mix Asphalt Concrete Roadway',
-        '2 × 28m Span RC T-Girder River Bridges',
-        '4,800 m³ Gabion River Training Protection',
+        '12.5 km Hot-Mix Asphalt Concrete Pavement',
+        '2 × 28m Span Reinforced Concrete T-Girder Bridges',
+        '4,800 m³ Gabion Hydrological Protection Walls',
       ],
       machineryDeployed: [
-        'Asphalt Paving Spread & 3 Vibratory Rollers',
-        '50T Mobile Crane & Concrete Boom Pump',
-        '10 Heavy Dump Trucks',
+        'High-Output Asphalt Paving Spread & Compactors',
+        '50-Ton Mobile Hydraulic Crane & Boom Pump',
+        '10 Heavy Tri-Axle Dump Trucks',
       ],
       dualLicenseAdvantage:
-        'River hydraulic scour protection and bridge pier dewatering handled by Joobira WWC engineers.',
+        'Bridge pier dewatering and river scour control implemented by Joobira hydraulic specialists.',
     },
   },
   {
     id: 'proj-civil-2',
-    title: 'Industrial Park Warehouses & Internal Utilities',
+    title: 'Logistics Center & Industrial Park Warehouses',
     location: 'Hawassa Industrial Zone',
     category: 'Civil & Buildings',
-    scopeHighlights: '22,000m² Steel Warehouses + Internal Roads & Water',
+    scopeHighlights: '22,000 m² Clear-Span Steel Sheds + Internal Roads',
     status: 'Completed',
-    progressPercent: 100,
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80',
-    clientType: 'Industrial Park Development / Foreign JV',
-    contractRole: 'Civil & Hydro Partner (GC + WWC)',
+    completionLabel: '100% Handover Complete',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
+    clientType: 'Industrial Development Authority',
+    contractRole: 'Turnkey Contractor (GC + WWC)',
     duration: '15 Months',
     technicalBrief: {
       overview:
-        'Four heavy-duty steel portal warehouses with laser-screeded slabs, internal asphalt roads, and pressurized fire/water ring main.',
+        'Four heavy-duty industrial warehouses featuring post-tensioned floor slabs, heavy truck circulation roadways, and pressurized fire ring main.',
       keyQuantities: [
-        '22,000 m² Industrial Floor Slabs & Steel Sheds',
-        '3.8 km Internal Heavy Truck Asphalt Roads',
-        '6.2 km Pressurized Water & Fire Hydrant Network',
+        '22,000 m² Laser-Screeded Industrial Floor Slabs',
+        '3.8 km Internal Heavy-Vehicle Asphalt Roads',
+        '6.2 km Pressurized Water & Fire Hydrant Ring Network',
       ],
       machineryDeployed: [
-        'Mobile Cranes & Laser Screed Concrete Rig',
-        'Excavators, Graders & Compactors',
-        'HD-PE Pipe Welding & Hydro-Test Units',
+        'Mobile Erection Cranes & Laser Concrete Finishing System',
+        'Excavators, Motor Graders & Compactors',
+        'HD-PE Electrofusion & Pressure Testing Equipment',
       ],
       dualLicenseAdvantage:
-        'Complete buildings + internal asphalt roads + pressurized water network delivered by one contractor.',
+        'Integrated delivery of industrial civil structures, heavy internal roads, and water utilities under a single point of responsibility.',
     },
   },
 ];
 
 export interface MachineryCategory {
   id: string;
-  title: string;
-  subtitle: string;
-  totalUnits: string;
-  availability: string;
+  title: Record<LanguageCode, string>;
+  countLabel: string;
+  description: Record<LanguageCode, string>;
   image: string;
-  equipmentList: {
-    name: string;
-    count: string;
-    spec: string;
-  }[];
+  sampleEquipment: string[];
 }
 
 export const MACHINERY_FLEET: MachineryCategory[] = [
   {
-    id: 'fleet-excavators',
-    title: 'Excavators & Backhoe Loaders',
-    subtitle: 'Deep Trenching, Rock Breaking & Bulk Earthworks',
-    totalUnits: '14 Owned Units',
-    availability: 'Ready to Mobilize',
-    image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=900&q=80',
-    equipmentList: [
-      { name: 'CAT 336D2 / 330D Chain Excavators', count: '5 Units', spec: '30–36T • Rock Breaker' },
-      { name: 'Komatsu PC220-8 Excavators', count: '4 Units', spec: '22T • Pipeline Trenching' },
-      { name: 'CAT Wheel Excavators & JCB Backhoes', count: '5 Units', spec: 'Urban Utility & Bedding' },
+    id: 'excavators',
+    title: {
+      OM: 'Qoffora & Earthmoving (14 Units)',
+      EN: 'Excavation & Heavy Earthmoving (14 Units)',
+      AM: 'ኤክስካቫተሮች እና ከባድ ቆፋሪዎች (14 ማሽኖች)',
+    },
+    countLabel: '14 Units',
+    description: {
+      OM: 'Qoffora lafaa gadi-fagoo, dhoombii cabsuu fi ujummoo dhiquu.',
+      EN: 'Deep trenching, rock breaking, bulk cut & fill, and pipeline excavation.',
+      AM: 'ለጥልቅ ቁፋሮ፣ ድንጋይ መስበሪያ እና የመስመር ዝርጋታ የሚያገለግሉ።',
+    },
+    image: 'https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=1200&q=80',
+    sampleEquipment: [
+      'CAT 336D2 / 330D Hydraulic Chain Excavators (30–36T)',
+      'Komatsu PC220-8 Pipeline Excavators',
+      'CAT Wheel Excavators & JCB Multi-Loaders',
     ],
   },
   {
-    id: 'fleet-pavers',
-    title: 'Asphalt Pavers, Graders & Rollers',
-    subtitle: 'Full-Cycle Highway Grading & Hot-Mix Asphalt Spread',
-    totalUnits: '16 Owned Units',
-    availability: 'ERA Certified',
-    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80',
-    equipmentList: [
-      { name: 'Vögele Super 1800-3 Asphalt Pavers', count: '2 Units', spec: '9m Electronic Sensor Screed' },
-      { name: 'CAT 140K Heavy Motor Graders', count: '4 Units', spec: '190 HP • Precision Grading' },
-      { name: 'Hamm Vibratory & Pneumatic Rollers', count: '10 Units', spec: '12–20T Earth & Asphalt' },
+    id: 'pavers',
+    title: {
+      OM: 'Aspaaltii & Dirreeffama (16 Units)',
+      EN: 'Asphalt Paving Spread & Grading (16 Units)',
+      AM: 'አስፋልት አንጣፊዎች እና ሮለሮች (16 ማሽኖች)',
+    },
+    countLabel: '16 Units',
+    description: {
+      OM: 'Daandii aspaaltii ho’aa diriirsuu fi sadarkaa ERA eegsisuu.',
+      EN: 'Precision roadbed grading, hot-mix asphalt paving, and subgrade compaction.',
+      AM: 'የአስፋልት ንጣፍ፣ የመንገድ ድልዳሎ እና የጥራት ደረጃን የሚያረጋግጡ።',
+    },
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80',
+    sampleEquipment: [
+      'Vögele Super 1800-3 Asphalt Pavers (9m Screed)',
+      'CAT 140K Heavy Motor Graders (190 HP)',
+      'Hamm 12–20T Vibratory & Pneumatic Rollers',
     ],
   },
   {
-    id: 'fleet-trucks',
-    title: 'Heavy Dump Trucks & Low-Bed Trailers',
-    subtitle: 'Aggregate Haulage & Autonomous Heavy Fleet Transport',
-    totalUnits: '24 Owned Units',
-    availability: 'GPS Tracked',
-    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80',
-    equipmentList: [
-      { name: 'Sinotruk HOWO 371HP Dump Trucks', count: '18 Units', spec: '20 m³ Heavy Tippers' },
-      { name: '60-Ton Low-Bed Machinery Trailers', count: '2 Units', spec: 'Rapid Excavator Transport' },
-      { name: 'Crane Trucks & Bitumen Sprayers', count: '4 Units', spec: 'Pipe Lifting & Prime Coat' },
+    id: 'transport',
+    title: {
+      OM: 'Geesjiba & Dump Trucks (24 Units)',
+      EN: 'Heavy Haulage & Dump Trucks (24 Units)',
+      AM: 'ከባድ ተሽከርካሪዎች እና ሎውቤዶች (24 መኪኖች)',
+    },
+    countLabel: '24 Units',
+    description: {
+      OM: 'Sanyii biyyee, aspaaltii fi maashinarii iddoo ijaarsaatti geessuu.',
+      EN: 'Autonomous aggregate transport, asphalt delivery, and heavy equipment trailers.',
+      AM: 'የአፈር፣ አስፋልት እና ማሽነሪዎችን ወደ ስራ ቦታ የማጓጓዝ አቅም ያላቸው።',
+    },
+    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80',
+    sampleEquipment: [
+      'Sinotruk HOWO 371HP 20m³ Dump Trucks (18 Units)',
+      '60-Ton Low-Bed Heavy Machinery Transporters (2 Units)',
+      'Crane Trucks & Mobile Bitumen Sprayers',
     ],
   },
   {
-    id: 'fleet-hydro',
-    title: 'Water Tankers, Mixers & Dewatering Pumps',
-    subtitle: 'Hydro-Testing, HD-PE Pipe Welding & Concrete Support',
-    totalUnits: '22+ Owned Units',
-    availability: 'WWC Ready',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80',
-    equipmentList: [
-      { name: '20,000L Water Bowser Tankers', count: '5 Units', spec: 'Hydro-Test & Compaction' },
-      { name: 'Carmix & Transit Concrete Mixers', count: '6 Units', spec: 'Mobile & Site Batching' },
-      { name: 'HD-PE Welding & Dewatering Pumps', count: '14 Units', spec: 'DN800 Fusion & 25-Bar Test' },
+    id: 'hydro-concrete',
+    title: {
+      OM: 'Bishaan & Konkiriitii (22+ Units)',
+      EN: 'Hydro-Testing & Concrete Support (22+ Units)',
+      AM: 'የውሃ እና ኮንክሪት ማሽነሪዎች (22+ ማሽኖች)',
+    },
+    countLabel: '22+ Units',
+    description: {
+      OM: 'Bishaan dhiyeessuu, konkiriitii maksuu fi ujummoo qulqulleessuu.',
+      EN: 'Pipeline hydrostatic testing, HD-PE fusion rigs, mobile batching, and high-volume dewatering.',
+      AM: 'የቧንቧ ግፊት መሞከሪያ፣ ኮንክሪት ማቡኪያ እና የጎርፍ ማድረቂያ ፓምፖች።',
+    },
+    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80',
+    sampleEquipment: [
+      '20,000L Heavy Water Bowser Tankers',
+      'Transit Mixers & Mobile Batching Plants',
+      'High-Pressure Hydrostatic Test Rigs & Dewatering Pumps',
     ],
   },
 ];
 
 export interface JobVacancy {
   id: string;
-  title: string;
-  department: 'Water Works (WWC)' | 'Roads & Asphalt (GC)' | 'Fleet & Machinery' | 'Supply Chain & Store' | 'Civil & Structural';
+  title: Record<LanguageCode, string>;
+  department: string;
   location: string;
-  type: 'Full-Time';
+  type: string;
   experience: string;
-  postedAt: string;
-  isNew?: boolean;
-  summary: string;
-  requirements: string[];
+  summary: Record<LanguageCode, string>;
 }
 
 export const INITIAL_JOBS: JobVacancy[] = [
   {
     id: 'job-1',
-    title: 'Senior Hydraulic & Water Supply Engineer',
+    title: {
+      OM: 'Injinara Bishaanii & Hydro Ol’aanaa',
+      EN: 'Senior Hydraulic & Water Supply Engineer',
+      AM: 'ከፍተኛ የሃይድሮሊክ እና የውሃ ምህንድስና ባለሙያ',
+    },
     department: 'Water Works (WWC)',
-    location: 'Project Site / Addis Ababa',
+    location: 'Addis Ababa / Project Site',
     type: 'Full-Time',
     experience: '6+ Years',
-    postedAt: '2d ago',
-    summary: 'Lead Ductile Iron/HD-PE pipeline installation, RC reservoirs & IPC verification.',
-    requirements: ['BSc/MSc in Hydraulic or Civil Engineering', 'Ethiopian WWC project track record'],
+    summary: {
+      OM: 'Ujummoo bishaanii HD-PE/Ductile Iron, kuusaa konkiriitii fi to’annoo IPC hogganuu.',
+      EN: 'Lead high-pressure pipeline installation, concrete reservoirs, and QA/QC verification on major water supply sites.',
+      AM: 'የውሃ መስመር ዝርጋታን፣ የኮንክሪት ማጠራቀሚያዎችን እና የሳይት ስራዎችን በበላይነት የሚመራ።',
+    },
   },
   {
     id: 'job-2',
-    title: 'Asphalt Road Material & Lab Engineer',
-    department: 'Roads & Asphalt (GC)',
-    location: 'Site Based',
+    title: {
+      OM: 'Injinara Qorannoo Aspaaltii & Laaboraatoorii',
+      EN: 'Asphalt & Highway Materials QA/QC Engineer',
+      AM: 'የአስፋልት እና የቁሳቁስ ላቦራቶሪ መሃንዲስ',
+    },
+    department: 'Roads & Highways (GC)',
+    location: 'Highway Site Based',
     type: 'Full-Time',
     experience: '5+ Years',
-    postedAt: '3d ago',
-    summary: 'Manage Marshall Asphalt Mix design, CBR/FDT compaction & ERA lab QA/QC.',
-    requirements: ['BSc in Civil / Materials Engineering', '5+ yrs on ERA Hot-Mix Asphalt roads'],
+    summary: {
+      OM: 'Qorannoo biyyee, walmakaa aspaaltii Marshall fi ulaagaa ERA eegsisuu.',
+      EN: 'Manage Marshall mix design, soil CBR compaction testing, and ERA material laboratory compliance.',
+      AM: 'የአስፋልት ድብልቅ ምርመራን፣ የአፈር ጥንካሬን እና የERA መስፈርቶችን የሚቆጣጠር።',
+    },
   },
   {
     id: 'job-3',
-    title: 'Heavy Machinery Mechanic & Fleet Supervisor',
-    department: 'Fleet & Machinery',
-    location: 'Central Garage (Addis Ababa)',
+    title: {
+      OM: 'Supervaayizara Suphaa Maashinarii',
+      EN: 'Heavy Equipment Mechanical Supervisor',
+      AM: 'የከባድ ማሽነሪዎች ጥገና ተቆጣጣሪ',
+    },
+    department: 'Fleet & Mechanical Division',
+    location: 'Central Workshop (Addis Ababa)',
     type: 'Full-Time',
     experience: '7+ Years',
-    postedAt: '5d ago',
-    summary: 'Lead maintenance & diagnostics for owned CAT excavators, pavers, graders & HOWO trucks.',
-    requirements: ['Mechanical / Heavy Equipment Diploma or BSc', 'CAT, Komatsu & Vögele diagnostics'],
-  },
-  {
-    id: 'job-4',
-    title: 'Site Storekeeper & Inventory Officer',
-    department: 'Supply Chain & Store',
-    location: 'Central Warehouse',
-    type: 'Full-Time',
-    experience: '3+ Years',
-    postedAt: '1w ago',
-    summary: 'Track rebar, cement, bitumen, HD-PE pipes, fuel logs & spare parts inventory.',
-    requirements: ['Diploma/BA in Supplies or Accounting', '3+ yrs construction store experience'],
-  },
-];
-
-export interface SampleApplication {
-  id: string;
-  candidateName: string;
-  phone: string;
-  jobTitle: string;
-  experienceYears: string;
-  cvFileName: string;
-  submittedAt: string;
-}
-
-export const INITIAL_APPLICATIONS: SampleApplication[] = [
-  {
-    id: 'app-101',
-    candidateName: 'Eng. Dawit Tadesse',
-    phone: '+251 911 482 910',
-    jobTitle: 'Senior Hydraulic & Water Supply Engineer',
-    experienceYears: '8 Years',
-    cvFileName: 'Dawit_Hydraulic_Eng_CV.pdf',
-    submittedAt: 'Today, 09:40 AM',
-  },
-  {
-    id: 'app-102',
-    candidateName: 'Eng. Chaltu Megersa',
-    phone: '+251 912 837 401',
-    jobTitle: 'Asphalt Road Material & Lab Engineer',
-    experienceYears: '6 Years',
-    cvFileName: 'Chaltu_ERA_Material_Eng.pdf',
-    submittedAt: 'Yesterday',
+    summary: {
+      OM: 'Suphaa fi to’annoo maashinarii CAT, Komatsu fi HOWO garee dhuunfaa qindeessuu.',
+      EN: 'Direct preventive diagnostics, field repairs, and spare parts management for owned excavators, pavers, and transport fleets.',
+      AM: 'የኤክስካቫተሮች፣ አንጣፊዎች እና ከባድ መኪኖች የቅድመ-መከላከል ጥገናን በበላይነት የሚመራ።',
+    },
   },
 ];

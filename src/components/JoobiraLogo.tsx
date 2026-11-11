@@ -19,16 +19,16 @@ export const JoobiraLogo: React.FC<JoobiraLogoProps> = ({
   theme = 'light',
 }) => {
   const dimensions = {
-    sm: 'w-10 h-10',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-24 h-24',
+    sm: 'w-9 h-9 sm:w-10 sm:h-10',
+    md: 'w-10 h-10 sm:w-12 sm:h-12',
+    lg: 'w-12 h-12 sm:w-16 sm:h-16',
+    xl: 'w-20 h-20 sm:w-24 sm:h-24',
   }[size];
 
   const isLight = theme === 'light';
 
   return (
-    <div className={`inline-flex items-center gap-3 select-none group ${className}`}>
+    <div className={`inline-flex items-center gap-2 sm:gap-3 select-none group min-w-0 ${className}`}>
       <div className={`relative ${dimensions} flex-shrink-0`}>
         <svg
           viewBox="0 0 128 128"
@@ -142,21 +142,21 @@ export const JoobiraLogo: React.FC<JoobiraLogoProps> = ({
       </div>
 
       {showText && (
-        <div className="flex flex-col text-left">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col text-left min-w-0">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <span
-              className={`font-display font-extrabold tracking-tight text-lg sm:text-xl leading-none ${
+              className={`font-display font-extrabold tracking-tight text-base sm:text-xl leading-none ${
                 isLight ? 'text-[#0A192F]' : 'text-white'
               }`}
             >
               JOOBIRA
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[#F59E0B] text-[#0A192F] tracking-wider shadow-xs">
+            <span className="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-extrabold bg-[#F59E0B] text-[#0A192F] tracking-wider shadow-xs whitespace-nowrap">
               GC + WWC
             </span>
           </div>
           <span
-            className={`text-[10px] sm:text-[11px] font-bold tracking-[0.12em] uppercase mt-1 leading-none ${
+            className={`text-[8.5px] sm:text-[11px] font-bold tracking-[0.05em] sm:tracking-[0.12em] uppercase mt-1 leading-none truncate ${
               isLight ? 'text-[#0284C7]' : 'text-[#38BDF8]'
             }`}
           >
